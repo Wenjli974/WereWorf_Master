@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
+
+@layer components {
+  .player-card {
+    @apply relative bg-white rounded-lg shadow-md p-4 transition-all hover:shadow-lg;
+  }
+
+  .player-card.dead {
+    @apply bg-gray-200 opacity-50;
+  }
+
+  .role-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .role-badge.werewolf {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .role-badge.villager {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .role-badge.witch {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  .role-badge.seer {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .game-log {
+    @apply bg-white rounded-lg shadow p-4 max-h-96 overflow-y-auto;
+  }
+
+  .game-log-entry {
+    @apply py-2 border-b border-gray-200 last:border-0;
+  }
+
+  .phase-indicator {
+    @apply text-lg font-semibold mb-4;
+  }
+
+  .timer {
+    @apply text-2xl font-bold text-center mb-4;
+  }
+}
